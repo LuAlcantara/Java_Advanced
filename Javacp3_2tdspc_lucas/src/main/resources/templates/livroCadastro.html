@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="www.thymeleaf.org">
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>Cadastro de Livro</title>
@@ -7,12 +7,12 @@
 <body>
     <div th:replace="~{fragments/header :: header}"></div>
     <div>
-        <form method="post" th:action="@{cadastrarLivro}" th:object="${livroRequest}">
+        <form method="post" th:action="@{cadastrar}" th:object="${livroRequest}">
             <h2>Cadastro de Livro</h2>
             <br>
             <table>
                 <tr>
-                    <td>Titulo</td>
+                    <td>Título:</td>
                     <td><input type="text" th:field="*{titulo}"></td>
                 </tr>
                 <tr>
@@ -30,7 +30,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <td>Preco:</td>
+                    <td>Preço:</td>
                     <td><input type="text" th:field="*{preco}"></td>
                 </tr>
                 <tr>
