@@ -31,7 +31,7 @@ public class LivroController {
         }
         // mapear livroRequest para livro
         // salvar livro no bd
-       livroService.salvarLivro(livroRequest);
+        livroService.salvarLivro(livroRequest);
         // renderizar a página com a lista de livros cadastrados
         return listarLivros(model);
     }
@@ -61,7 +61,7 @@ public class LivroController {
     }
 
     @GetMapping("/deletar/{id}")
-    public String deletarLivro(@PathVariable Long id, Model model) {
+    public String deletarLivro(@PathVariable Long id, Model model){
         livroService.deletarLivro(id);
         return listarLivros(model);
     }
